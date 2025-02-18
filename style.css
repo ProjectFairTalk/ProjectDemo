@@ -1,0 +1,269 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #343a40;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #003366;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 4.5em;
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+nav a {
+  color: #f7dc6f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1.2em;
+}
+
+nav a:hover {
+  color: #f0f0f0;
+}
+
+main {
+  padding: 2rem;
+}
+
+#hero {
+  background-color: #e9ecef;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border: 2px solid #003366;
+}
+
+#hero h2 {
+  color: #003366;
+  margin-bottom: 1rem;
+  font-size: 2em;
+}
+
+#features {
+  margin-top: 2rem;
+  border: 2px solid #003366;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#features h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #003366;
+  font-size: 1.75em;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-item {
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: #f7dc6f;
+  margin-bottom: 1rem;
+}
+
+.feature-item h4 {
+  margin-bottom: 0.75rem;
+  color: #343a40;
+}
+
+.feature-item h4 a {
+  color: #003366;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #343a40;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Chatbot Demo Styles */
+#chatbot-demo {
+  margin-top: 3rem;
+  border: 2px solid #003366;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#chatbot-demo h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #003366;
+}
+
+#chat-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+#chat-log {
+  padding: 1rem;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.user-message,
+.bot-message {
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+}
+
+.user-message {
+  background-color: #003366;
+  color: #fff;
+  align-self: flex-end;
+}
+
+.bot-message {
+  background-color: #f0f0f0;
+  color: #343a40;
+  align-self: flex-start;
+}
+
+#chat-input {
+  display: flex;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+}
+
+#message-input {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+#send-button {
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#send-button:hover {
+  background-color: #002244;
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px; /* Could be more or less, depending on screen size */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* The Close Button */
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Form elements in modal */
+.modal-content input[type="text"],
+.modal-content input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.modal-content button {
+  background-color: #003366;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.modal-content button:hover {
+  background-color: #002244;
+}
+
+#login-link {
+  cursor: pointer;
+}
